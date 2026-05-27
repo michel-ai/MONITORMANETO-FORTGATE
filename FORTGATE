@@ -1,0 +1,1615 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 206,
+  "links": [],
+  "panels": [
+    {
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"\n    display: flex;\n    align-items: center;\n    padding: 12px 25px; /* Aumentado para dar mais corpo */\n    background: linear-gradient(90deg, #1a1c1e 0%, #161719 100%); /* Gradiente sutil para profundidade */\n    border-left: 6px solid #c32027; /* Borda mais grossa para imponência */\n    border-radius: 4px;\n    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para destacar do fundo */\n    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;\n    min-width: fit-content;\n\">\n    <div style=\"\n        color: #c32027; \n        font-weight: 950; /* Peso máximo */\n        font-size: 1.2rem; /* Aumentado */\n        letter-spacing: 2.5px; /* Letras mais afastadas dão ar de 'Premium' */\n        margin-right: 20px;\n        text-shadow: 1px 1px 0px rgba(0,0,0,0.2);\n    \">\n        FORTIGATE 40F\n    </div>\n    \n    <div style=\"width: 2px; height: 24px; background: #c32027; opacity: 0.3; margin-right: 20px;\"></div>\n\n    <div style=\"\n        color: #ffffff; \n        font-size: 1rem; \n        font-weight: 300; \n        letter-spacing: 1.5px;\n        text-transform: uppercase;\n        display: flex;\n        gap: 8px;\n    \">\n        <span>Network</span>\n        <span>Interfaces</span>\n        <span style=\"color: #c32027; font-weight: 800; border-bottom: 2px solid #c32027;\">STATUS</span>\n    </div>\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "10.4.19",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "dark-red",
+            "mode": "fixed"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "UP"
+                },
+                "2": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "DOWN"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "noValue": "0",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 11,
+        "x": 0,
+        "y": 2
+      },
+      "id": 1,
+      "options": {
+        "infinitePan": false,
+        "inlineEditing": true,
+        "panZoom": false,
+        "root": {
+          "background": {
+            "color": {
+              "fixed": "transparent"
+            },
+            "image": {
+              "fixed": "https://i.ibb.co/gMkdgDTs/FORTI40F.png",
+              "mode": "fixed"
+            }
+          },
+          "border": {
+            "color": {
+              "fixed": "dark-green"
+            }
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
+          },
+          "elements": [
+            {
+              "background": {
+                "color": {
+                  "field": "Interface wan(CLARO/91984061214): Operational status",
+                  "fixed": "#D9D9D9"
+                },
+                "image": {
+                  "field": "",
+                  "fixed": "",
+                  "mode": "fixed"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 12,
+                "text": {
+                  "field": "Interface wan(CLARO/91984061214): Operational status",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 1",
+              "placement": {
+                "height": 23.983322143554688,
+                "left": 491,
+                "top": 69,
+                "width": 40.94999694824219
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "Interface lan2(WAN_PRODEPA): Operational status",
+                  "fixed": "#D9D9D9"
+                },
+                "image": {
+                  "field": "",
+                  "fixed": "",
+                  "mode": "fixed"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 12,
+                "text": {
+                  "field": "Interface lan2(WAN_PRODEPA): Operational status",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 2",
+              "placement": {
+                "height": 23.949996948242188,
+                "left": 678,
+                "top": 69,
+                "width": 35.94999694824219
+              },
+              "type": "metric-value"
+            }
+          ],
+          "name": "Element 1770924082033",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "top": 0,
+            "width": 100
+          },
+          "type": "frame"
+        },
+        "showAdvancedTypes": true,
+        "tooltip": {
+          "disableForOneClick": false,
+          "mode": "single"
+        },
+        "zoomToContent": false
+      },
+      "pluginVersion": "10.4.19",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [
+                  0
+                ],
+                "name": "transformNull",
+                "params": [
+                  {
+                    "name": "number",
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "2"
+              ],
+              "text": "transformNull(0)"
+            }
+          ],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface wan(CLARO/91984061214): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "Wan - Claro",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [
+                  0
+                ],
+                "name": "transformNull",
+                "params": [
+                  {
+                    "name": "number",
+                    "type": "float"
+                  }
+                ]
+              },
+              "params": [
+                "2"
+              ],
+              "text": "transformNull(0)"
+            }
+          ],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface lan2(WAN_PRODEPA): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "Lan - Prodepa",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "type": "canvas"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#BF1B00",
+                "value": null
+              },
+              {
+                "color": "#1F9065",
+                "value": 600
+              }
+            ]
+          },
+          "unit": "uptime"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Tempo Ativo"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 11,
+        "y": 2
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.19",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "System uptime"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "UPTIME ",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "neutral": 0
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 75
+              },
+              {
+                "color": "#FF0000",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 11,
+        "x": 13,
+        "y": 2
+      },
+      "id": 19,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "text": {
+          "titleSize": 12,
+          "valueSize": 36
+        }
+      },
+      "pluginVersion": "10.4.19",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*CPU utilization/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "CPU LOAD ",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Banda",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 15,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Download (In)"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Upload (Out)"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 20,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/Interface.*Bits .*/"
+          },
+          "itemTag": {
+            "filter": "$provedora"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "THROUGHPUT",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Banda",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 15,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Download (In)"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Upload (Out)"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 16
+      },
+      "id": 24,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*Packets loss/"
+          },
+          "itemTag": {
+            "filter": "$servicos"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Health-Check",
+      "type": "timeseries"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 13,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"display: flex; align-items: center; gap: 10px; width: 100%;\">\r\n    <span style=\"font-size: 11px; color: #FFFFFF; text-transform: uppercase; white-space: nowrap;\">ICMP ping</span>\r\n    <div style=\"flex-grow: 1; height: 1px; background: #DC143C; border-radius: 2px; opacity: 0.8;\"></div>\r\n</div>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.4.19",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 15,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/CLARO/i"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "LINK CLARO"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "cyan",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PRODEPA/i"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "LINK PRODEPA"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 25
+      },
+      "id": 22,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/ICMP/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "LATÊNCIA Da Unidade",
+      "type": "timeseries"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 14,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"display: flex; align-items: center; gap: 10px; width: 100%;\">\r\n    <span style=\"font-size: 11px; color: #FFFFFF; text-transform: uppercase; white-space: nowrap;\">INTERFACES WAN</span>\r\n    <div style=\"flex-grow: 1; height: 1px; background: #DC143C; border-radius: 2px; opacity: 0.8;\"></div>\r\n</div>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.4.19",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 13,
+        "x": 0,
+        "y": 35
+      },
+      "id": 16,
+      "options": {
+        "ackEventColor": "rgb(56, 219, 156)",
+        "ackField": true,
+        "ageField": false,
+        "allowDangerousHTML": false,
+        "customLastChangeFormat": false,
+        "descriptionAtNewLine": false,
+        "descriptionField": true,
+        "fontSize": "100%",
+        "highlightBackground": false,
+        "highlightNewEvents": false,
+        "highlightNewerThan": "1h",
+        "hostField": true,
+        "hostGroups": false,
+        "hostProxy": false,
+        "hostTechNameField": false,
+        "lastChangeFormat": "",
+        "layout": "table",
+        "markAckEvents": false,
+        "okEventColor": "rgb(56, 189, 113)",
+        "opdataField": false,
+        "pageSize": 5,
+        "problemTimeline": true,
+        "resizedColumns": [
+          {
+            "id": "host",
+            "value": 243.58334350585938
+          },
+          {
+            "id": "name",
+            "value": 273.8333435058594
+          }
+        ],
+        "severityField": true,
+        "showDatasourceName": false,
+        "showTags": true,
+        "sortProblems": "lastchange",
+        "statusField": true,
+        "statusIcon": false,
+        "triggerSeverity": [
+          {
+            "color": "rgb(108, 108, 108)",
+            "priority": 0,
+            "severity": "Not classified",
+            "show": true
+          },
+          {
+            "color": "rgb(120, 158, 183)",
+            "priority": 1,
+            "severity": "Information",
+            "show": true
+          },
+          {
+            "color": "rgb(175, 180, 36)",
+            "priority": 2,
+            "severity": "Warning",
+            "show": true
+          },
+          {
+            "color": "rgb(255, 137, 30)",
+            "priority": 3,
+            "severity": "Average",
+            "show": true
+          },
+          {
+            "color": "rgb(255, 101, 72)",
+            "priority": 4,
+            "severity": "High",
+            "show": true
+          },
+          {
+            "color": "rgb(215, 0, 0)",
+            "priority": 5,
+            "severity": "Disaster",
+            "show": true
+          }
+        ]
+      },
+      "pluginVersion": "10.4.19",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "STATUS OPERACIONAL | PRODEPA",
+      "type": "alexanderzobnin-zabbix-triggers-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "C44sQuJ7z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Uso (%)",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 11,
+        "x": 13,
+        "y": 35
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "C44sQuJ7z"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "FW-SDWAN"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Monitoramento de Memória - FW-CECOMT",
+      "type": "timeseries"
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "FW-FORTIGATE-OC-200F",
+          "value": "FW-FORTIGATE-OC-200F"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "C44sQuJ7z"
+        },
+        "definition": "Zabbix - host",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Host",
+        "multi": false,
+        "name": "host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "FW-SDWAN",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [],
+          "value": []
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "C44sQuJ7z"
+        },
+        "definition": "Zabbix - item",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Serviços",
+        "multi": true,
+        "name": "servicos",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "FW-SDWAN",
+          "host": "$host",
+          "item": "/.*\\[wan\\]: Packets loss/",
+          "itemTag": "/.*/",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/SD-WAN \\[(.*)\\]:\\[wan\\]: Packets loss/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [],
+          "value": []
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Provedora",
+        "multi": true,
+        "name": "provedora",
+        "options": [
+          {
+            "selected": false,
+            "text": "Claro",
+            "value": "Claro"
+          },
+          {
+            "selected": false,
+            "text": "Prodepa",
+            "value": "Prodepa"
+          }
+        ],
+        "query": "Claro, Prodepa",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Fortigate Copy",
+  "uid": "afeiqjq8uktfkf",
+  "version": 31,
+  "weekStart": ""
+}
